@@ -1,10 +1,13 @@
 {
-  "name": "backdrop-easy",
+  "name": "@sushanthkille/backdrop-easy",
   "version": "1.0.0",
   "description": "Provider and hook for Material UIbackdrop",
   "author": "hashslash",
   "license": "MIT",
-  "repository": "hashslash/backdrop-easy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hashslash/backdrop-easy.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -52,5 +55,16 @@
   ],
   "dependencies": {
     "@material-ui/core": "^4.11.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/hashslash/backdrop-easy/issues"
+  },
+  "homepage": "https://github.com/hashslash/backdrop-easy#readme",
+  "directories": {
+    "example": "example"
+  },
+  "keywords": [
+    "Backdrop",
+    "MaterialUI"
+  ]
 }
