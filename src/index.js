@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react'
-import {CircularProgress, Backdrop, makeStyles} from '@material-ui/core';
+import Backdrop from '@material-ui/core/Backdrop';
+import {makeStyles} from '@material-ui/core/styles';
 
 const BackdropContext = React.createContext('backdrop-context');
 
