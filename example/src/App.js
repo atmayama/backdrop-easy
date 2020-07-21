@@ -1,10 +1,16 @@
 import React from 'react'
 
-import { ExampleComponent } from 'backdrop-easy'
-import 'backdrop-easy/dist/index.css'
+import { useBackdrop } from 'backdrop-easy'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const [open]=useBackdrop();
+  return (
+  <div >
+    <button onClick={open}>
+      Pop
+    </button>
+  </div>
+  );
 }
 
 export default App

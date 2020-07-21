@@ -1,9 +1,5 @@
 # backdrop-easy
 
-> Provider and hook for Material UIbackdrop
-
-[![NPM](https://img.shields.io/npm/v/backdrop-easy.svg)](https://www.npmjs.com/package/backdrop-easy) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
 ## Install
 
 ```bash
@@ -13,18 +9,28 @@ npm install --save backdrop-easy
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import { BackdropProvider } from 'backdrop-easy';
 
-import MyComponent from 'backdrop-easy'
-import 'backdrop-easy/dist/index.css'
+<BackdropProvider progress={<CircularProgress/>}>
+        <App />
+</BackdropProvider>
+```
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+```jsx
+import React from 'react'
+
+import { useBackdrop } from 'backdrop-easy'
+
+const App = () => {
+  const [open]=useBackdrop();
+  return (
+  <div >
+    <button onClick={open}>
+      Pop
+    </button>
+  </div>
+  );
 }
 ```
 
-## License
 
-MIT © [hashslash](https://github.com/hashslash)

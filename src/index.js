@@ -13,7 +13,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const BackdropProvider = ({theme,progress,children}={theme:'light',progress:<CircularProgress/>}) => {
+export const BackdropProvider = (
+  {theme:theme,progress:progress,children}
+  ) => {
   const [open,setOpen]=useState(false);
 
   const classes = useStyles();
@@ -27,9 +29,12 @@ export const BackdropProvider = ({theme,progress,children}={theme:'light',progre
   return (
   <BackdropContext.Provider value={[openBackdrop,closeBackdrop]}>
     {children}
-    <Backdrop className={theme='light'?classes.backdropLight:classes.backdropDark} open={open} onClick={closeBackdrop}>
-        {progress}
-      </Backdrop>
+    <Backdrop 
+    className={theme='light'?classes.backdropLight:classes.backdropDark} 
+    open={open} 
+    onClick={closeBackdrop}>
+      {progress}
+    </Backdrop>
   </BackdropContext.Provider>
   );
 }
