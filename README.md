@@ -3,13 +3,13 @@
 ## Install
 
 ```bash
-npm install --save backdrop-easy
+npm i @sushanthkille/backdrop-easy
 ```
 
 ## Usage
 
 ```jsx
-import { BackdropProvider } from 'backdrop-easy';
+import { BackdropProvider } from '@sushanthkille/backdrop-easy';
 
 <BackdropProvider progress={<CircularProgress/>}>
         <App />
@@ -19,7 +19,7 @@ import { BackdropProvider } from 'backdrop-easy';
 ```jsx
 import React from 'react'
 
-import { useBackdrop } from 'backdrop-easy'
+import { useBackdrop } from '@sushanthkille/backdrop-easy'
 
 const App = () => {
   const [open]=useBackdrop();
